@@ -16,3 +16,10 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 ## Copyright and License of the original theme
 
 Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-modern-business/blob/gh-pages/LICENSE) license.
+
+
+## Bugs
+
+This theme is far from being perfect. Use it at your own risk.
+
+Please report bugs of this Hugo Version only [here](https://github.com/juh2/hugo-startbootstrap-modern-business/issues)
