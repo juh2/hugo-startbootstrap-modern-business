@@ -1,0 +1,26 @@
+        <!-- Content Row -->
+<!--        <div class="row">-->
+            <div class="col-md-6">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        {{ with .name }}
+                        <h3 class="panel-title">{{ . }}</h3>
+                        {{ end }}
+                    
+                    </div>
+                    <div class="panel-body">
+                        {{ with .preis }}
+                        <span class="price"><sup>€</sup>{{ index . 0 }}<sup>{{ index . 1 }}</sup></span>
+                        <span class="period">{{ i18n "permonth" }}</span>
+                        {{ end }}
+                    </div>
+                    <ul class="list-group">
+                        {{ range .leistungen }}
+                        <li class="list-group-item">{{ . | safeHTML }}</li>
+                        {{ end }}
+                        <li class="list-group-item"><a href="#" class="btn btn-primary">{{ i18n "order" }}</a></li>
+                    </ul>
+                </div>
+            </div>
+<!--        </div> -->
+        <!-- /.row -->

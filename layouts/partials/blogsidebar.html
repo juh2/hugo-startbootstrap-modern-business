@@ -1,0 +1,53 @@
+<!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+                <!-- Blog Search Well -->
+                <div class="well">
+                    <h4>Blog Search</h4>
+                    <div class="input-group">
+                        <form method="GET" action="/search">
+                        <input type="text" name="q" id="search" class="form-control">
+                        </form>
+                        <!-- FIXME: button does not work -->
+                        <span class="input-group-btn">
+                            <button form="search" class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+
+                <!-- Blog Categories Well -->
+                <div class="well">
+                    <h4>Blog Categories</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                {{ $baseurl := .Site.BaseURL }}
+                                {{ range $key, $value := .Site.Taxonomies.categories }}
+                                <li><a href="{{ $baseurl}}categories/{{ $key | urlize}}">{{ $key }}</a> ({{ len $value }})
+                                </li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                        <!-- /.col-lg-6 -->
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                {{ $baseurl := .Site.BaseURL }}
+                                {{ range $key, $value := .Site.Taxonomies.categories }}
+                                <li><a href="{{ $baseurl}}categories/{{ $key | urlize}}">{{ $key }}</a> ({{ len $value }})
+                                </li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+                <!-- Side Widget Well -->
+                <div class="well">
+                    <h4>{{ .Site.Params.blogsidewellheadline }}</h4>
+                    <p>{{ .Site.Params.blogsidewellcopy }}</p>
+                </div>
+
+            </div>

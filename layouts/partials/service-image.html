@@ -1,0 +1,9 @@
+<!-- Image Header -->
+        <div class="row">
+            <div class="col-lg-12">
+            	{{ with .Params.images }}
+                <img class="img-responsive" src="{{ index . 1 | relURL }}" alt="">	
+            	{{ end }}
+            </div>
+        </div>
+        <!-- /.row -->

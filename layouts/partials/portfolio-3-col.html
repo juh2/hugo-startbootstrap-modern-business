@@ -1,0 +1,55 @@
+        <!-- Projects Row -->
+        <!-- Use it with an image size of 700x400 -->           
+        <div class="row">
+            {{ range first 3 (where .Data.Pages "Section" "portfolio") }}
+            <div class="col-md-4 img-portfolio">
+                <a href="{{ .URL }}">
+                    {{ with .Params.images }}
+                    <img class="img-responsive img-hover" src="{{ index . 1 | relURL }}" alt="">
+                    {{ end }}
+                </a>
+                <h3>
+                    <a href="{{ .URL }}">{{ .Title }}</a>
+                </h3>
+                <p>{{ .Description }}</p>
+            </div>
+            {{ end }}
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            {{ range first 3 (after 3 (where .Data.Pages "Section" "portfolio")) }}
+            <div class="col-md-4 img-portfolio">
+                <a href="{{ .URL }}">
+                    {{ with .Params.images }}
+                    <img class="img-responsive img-hover" src="{{ index . 1 | relURL }}" alt="">
+                    {{ end }}
+                </a>
+                <h3>
+                    <a href="{{ .URL }}">{{ .Title }}</a>
+                </h3>
+                <p>{{ .Description }}</p>
+            </div>
+            {{ end }}
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <!-- Only use if there a still items. You end up with an unclosed div instead 
+        <div class="row">
+            {{ range first 3 (after 6 (where .Data.Pages "Section" "portfolio")) }}
+            <div class="col-md-4 img-portfolio">
+                <a href="{{ .URL }}">
+                    {{ with .Params.images }}
+                    <img class="img-responsive img-hover" src="{{ index . 1 | relURL }}" alt="">
+                    {{ end }}
+                </a>
+                <h3>
+                    <a href="{{ .URL }}">{{ .Title }}</a>
+                </h3>
+                <p>{{ .Description }}</p>
+            </div>
+            {{ end }}
+        </div>
+        <!-- /.row -->

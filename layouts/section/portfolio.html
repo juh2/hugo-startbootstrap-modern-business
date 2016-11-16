@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header"> {{ .Title }}
+                    <small>{{ .Params.subtitle }}</small>
+                </h1>
+                {{ partial "breadcrumb.html" . }}
+            </div>
+        </div>
+        <!-- /.row -->
+    {{ partial "portfolio-2-col.html" . }}
+{{ end }}

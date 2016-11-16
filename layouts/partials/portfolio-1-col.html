@@ -1,0 +1,21 @@
+        <!-- Project One -->
+        <!-- Use it with an image size of 700x300 -->
+        {{ range where .Data.Pages "Section" "portfolio" }}
+        <div class="row">
+            <div class="col-md-7">
+                <a href="{{ .URL }}">
+                    {{ with .Params.images }}
+                    <img class="img-responsive img-hover" src="{{ index . 1 | relURL }}" alt="">
+                    {{ end }}
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>{{ .Title }}</h3>
+                <h4>{{ .Params.subtitle }}</h4>
+                <p>{{ .Description }}</p>
+                <a class="btn btn-primary" href="{{ .URL }}">{{ i18n "viewproject"}}</i></a>
+            </div>
+        </div>
+        {{ end }}
+
+        <!-- /.row -->

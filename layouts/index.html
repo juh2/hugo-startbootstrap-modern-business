@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+
+{{ partial "carousel.html" . }}
+
+    <!-- Page Content -->
+    <div class="container">
+
+<!--        {{ partial "marketing-icon-section" . }}-->
+
+		{{ partial "intro" . }}
+		
+		{{ partial "service-tabs" . }}
+
+		{{ partial "service-panel" . }}
+<!--        {{ partial "portfolio.html" . }}-->
+        {{ partial "price-list" . }}
+<!--        {{ partial "feature.html" . }}-->
+<!--        {{ partial "referenz.html" .}} -->
+
+        {{ partial "calltoaction.html" . }}
+{{ end }}
