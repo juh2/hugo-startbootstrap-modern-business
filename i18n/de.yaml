@@ -16,3 +16,7 @@
   translation: "pro Monat"
 - id: posted_on
   translation: "Erschienen am"
+- id: blog_search
+  translation: "Suche im Blog"
+- id: blog_categories
+  translation: "Rubriken"

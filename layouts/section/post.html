@@ -31,7 +31,8 @@
                     {{ end }}
                 </p>
                 <p><i class="fa fa-clock-o"></i> {{ i18n "posted_on"}} {{ .Date }}</p>
-                {{ if .Params.images}}
+                
+                {{ if .Params.images }}
                 <hr>
                 <a href="{{ .Permalink }}">
                     {{ with .Params.images }}
