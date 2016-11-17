@@ -30,7 +30,8 @@
                     by <a href="/about/team/{{ index . 0 | urlize }}">{{ index . 0 }}</a>
                     {{ end }}
                 </p>
-                <p><i class="fa fa-clock-o"></i> Posted on {{ .Date }}</p>
+                <p><i class="fa fa-clock-o"></i> {{ i18n "posted_on"}} {{ .Date }}</p>
+                {{ if .Params.images}}
                 <hr>
                 <a href="{{ .Permalink }}">
                     {{ with .Params.images }}
@@ -38,6 +39,7 @@
                     {{ end }}
                 </a>
                 <hr>
+                {{ end }}
                 <p>{{ .Summary }}</p>
                 <a class="btn btn-primary" href="{{ .Permalink }}">{{ i18n "readmore" }} <i class="fa fa-angle-right"></i></a>
 
