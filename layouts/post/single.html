@@ -10,7 +10,7 @@
                     <small>by <a href="/about/team/{{ index . 0 | urlize }}">{{ index . 0 }}</a></small>
                     {{ end }}                    
                 </h1>
-                {{ partial "breadcrumb" . }}
+                <!-- {{ partial "breadcrumb" . }} Breadcrumbs does not work well with Hugo -->
             </div>
         </div>
         <!-- /.row -->
