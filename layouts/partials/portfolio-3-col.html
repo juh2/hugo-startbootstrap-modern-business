@@ -19,6 +19,7 @@
 
         <!-- Projects Row -->
         <div class="row">
+        {{ if gt (len (where .Data.Pages "Section" "portfolio")) 3 }}
             {{ range first 3 (after 3 (where .Data.Pages "Section" "portfolio")) }}
             <div class="col-md-4 img-portfolio">
                 <a href="{{ .URL }}">
@@ -32,12 +33,14 @@
                 <p>{{ .Description }}</p>
             </div>
             {{ end }}
+        {{ end }}
         </div>
         <!-- /.row -->
 
         <!-- Projects Row -->
-        <!-- Only use if there a still items. You end up with an unclosed div instead 
+        <!-- Only use if there a still items. You end up with an unclosed div instead -->
         <div class="row">
+        {{ if gt (len (where .Data.Pages "Section" "portfolio")) 6 }}
             {{ range first 3 (after 6 (where .Data.Pages "Section" "portfolio")) }}
             <div class="col-md-4 img-portfolio">
                 <a href="{{ .URL }}">
@@ -51,5 +54,6 @@
                 <p>{{ .Description }}</p>
             </div>
             {{ end }}
+        {{ end }}
         </div>
         <!-- /.row -->
