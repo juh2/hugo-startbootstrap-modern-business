@@ -20,7 +20,7 @@
             <div class="col-md-3">
                 <div class="list-group">
                     {{ $currentNode := . }}
-                    {{ range where .Site.Pages "Section" "services"}}
+                    {{ range where .Site.Pages "Section" "vorteile"}}
                     <a href="{{ .URL }}" class="list-group-item">{{ .Title }}</a>
                     {{ end }}
                 </div>

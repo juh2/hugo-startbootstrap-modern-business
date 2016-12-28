@@ -5,7 +5,7 @@
                 <h2 class="page-header">Service List</h2>
             </div>
             <div class="col-md-4">
-                {{ range first 3 (where .Data.Pages "Section" "services") }}
+                {{ range first 3 (where .Data.Pages "Section" "vorteile") }}
                 <div class="media">
                     <div class="pull-left">
                         <span class="fa-stack fa-2x">
@@ -21,7 +21,7 @@
                 {{ end }}
             </div>
             <div class="col-md-4">
-                {{ range first 3 (after 3 (where .Data.Pages "Section" "services")) }}
+                {{ range first 3 (after 3 (where .Data.Pages "Section" "vorteile")) }}
                 <div class="media">
                     <div class="pull-left">
                         <span class="fa-stack fa-2x">
@@ -37,7 +37,7 @@
                 {{ end }}
             </div>
             <div class="col-md-4">
-                {{ range first 3 (after 6 (where .Data.Pages "Section" "services")) }}
+                {{ range first 3 (after 6 (where .Data.Pages "Section" "vorteile")) }}
                 <div class="media">
                     <div class="pull-left">
                         <span class="fa-stack fa-2x">
