@@ -13,11 +13,12 @@
         <!-- /.row -->
 
         <!-- Content Row -->
-                {{ partial "service-image" . }}
+                
 
         <div class="row">
             <!-- Sidebar Column -->
             <div class="col-md-3">
+            {{ partial "service-image" . }}
                 <div class="list-group">
                     {{ $currentNode := . }}
                     {{ range where .Site.Pages "Section" "vorteile"}}
